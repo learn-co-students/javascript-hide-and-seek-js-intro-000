@@ -27,16 +27,38 @@ function getFirstSelector(selector){
 //just happen to be divs. This method should
 //work with arbitrary elements.)
 function nestedTarget(){
-  return document.querySelector('div.nested div div div div.target')
+  return document.querySelector('div#nested div div div.target')
 }
 
 //increases the ranks in all of the
 //.ranked-lists by n
 function increaseRankBy(n){
-
+  //debugger
+  //var first = document.querySelector('.ranked-list li')
+  //console.log(first)
+  var nodelist = document.querySelectorAll('.ranked-list li')
+  console.log(nodelist)
+  for (var i=0; i<nodelist.length; i++){
+    console.log(nodelist[i].innerHTML)
+    var number = parseInt(nodelist[i].innerHTML) + n
+    console.log(number)
+    nodelist[i].innerHTML = number
+  }
 }
 //pulls out the most deeply nested child
 //from div#grand-node
 function deepestChild(){
+  var base = document.querySelector('div#grand-node')
+  return recurseChild(base)
+  }
 
+function recurseChild(elem){
+  if (elem.children!= []){
+    console.log('brid)')
+    //console.log(elem.hasChildNodes())
+    return recurseChild(elem.children)
+  }
+  else{
+    return elem
+  }
 }
