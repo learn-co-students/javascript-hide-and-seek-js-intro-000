@@ -53,10 +53,11 @@ function deepestChild(){
   }
 
 function recurseChild(elem){
-  if (elem.children!= []){
+  if (elem.children[0]!= null){
     console.log('brid)')
     //console.log(elem.hasChildNodes())
-    return recurseChild(elem.children)
+    var child = elem.children
+    return recurseChild(child[0])
   }
   else{
     return elem
