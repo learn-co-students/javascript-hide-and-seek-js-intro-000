@@ -2,7 +2,7 @@
 //accepts a selector and returns the
 //first element that matches
 function getFirstSelector(selector){
-  var idList;
+  /*var idList;
   if (document.getElementById(selector)!= null){
     idList = document.getElementById(selector)
   }
@@ -15,7 +15,9 @@ function getFirstSelector(selector){
   else{
     idList = []
   }
-  return idList[0]
+  return idList[0]*/
+
+  return document.querySelector(selector)
 }
 
 //pulls a .target out of #nested (# is
@@ -25,7 +27,7 @@ function getFirstSelector(selector){
 //just happen to be divs. This method should
 //work with arbitrary elements.)
 function nestedTarget(){
-
+  return document.querySelector('div.nested div div div div.target')
 }
 
 //increases the ranks in all of the
