@@ -18,14 +18,14 @@ function increaseRankBy(n){
   var children = firstList
   var start = 1;
   for (var i = 0, l = children.length; i < l; i++) {
-      return start + i + n;
+      parseInt(children[i].innerHTML);
   }
 
   children = secondList;
   start = 12;
 
   for (var i = 0, l = children.length; i < l; i++) {
-      return start + i + n;
+      parseInt(children[i].innerHTML);
   }
 }
 
