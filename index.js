@@ -8,8 +8,11 @@ function nestedTarget() {
   return(value)
 }
 
-function deepestChild(array, criteria) {
-  
+function deepestChild() {
+  let newObject = document.getElementById('grand-node');
+  let newArray = document.getElementById('grand-node').querySelectorAll('div');
+  let deepestValue = (newArray[newArray.length-1].innerHTML).toString();
+  return(newArray[newArray.length-1])
 }
 
 function increaseRankBy(n) {
