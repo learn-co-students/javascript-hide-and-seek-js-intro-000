@@ -17,5 +17,5 @@ function increaseRankBy(n){
     num = (parseInt(list[i].innerHTML)) + n;
     (list[i].innerHTML) = num
   }
-  return list
+  // return list
 }
