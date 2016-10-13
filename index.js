@@ -3,7 +3,7 @@ function getFirstSelector(selector){
 }
 
 function nestedTarget(){
-  return document.getElementById('nested').querySelectorAll('.target');
+  return document.getElementById('nested').querySelector('.target');
 }
 
 function increaseRankBy(n){
@@ -25,12 +25,24 @@ function increaseRankBy(n){
   }
 }
 
-function deepestChild(){
-  let deepestDiv;
-  const theseDivs = document.getElementById('grand-node').querySelectorAll('div');
+// function deepestChild(){
+//   let deepestDiv;
+//   const theseDivs = document.getElementById('grand-node').querySelectorAll('div');
+//
+//   for (var i = 0; i < theseDivs.length; i++) {
+//     deepestDiv = theseDivs[i];
+// }
+// return deepestDiv;
+// }
 
-  for (var i = 0; i < theseDivs.length; i++) {
-    deepestDiv = theseDivs[i];
-}
-return deepestDiv;
+function deepestChild() {
+  let node = document.getElementById('grand-node')
+  let nextNode = node.children[0]
+
+  while (nextNode) {
+    node = nextNode
+    nextNode = node.children[0]
+  }
+
+  return node
 }
