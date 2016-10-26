@@ -15,5 +15,9 @@ function increaseRankBy(n) {
 /* hang up was that rankedLists[1].length doesn't work. Not exactly clear why. Needed to be
 rankedLists[1].children. This gives length correctly. */
 function deepestChild (){
-return document.querySelector('#grand-node div div div div');
+  var next=document.getElementById('grand-node')
+  while (next.children.length>0) {
+    next=next.children[0]
+  }
+  return next
 }
