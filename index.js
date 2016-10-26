@@ -7,13 +7,10 @@ function nestedTarget() {
 }
 
 function increaseRankBy(n) {
-  var list= document.getElementById('app').querySelectorAll('ul.ranked-list');
-  var array=[];
-  array.push(list);
-  for (var i=0;i < array.length;i++) {
-    array[i+n];
+  const list= document.getElementById('app').querySelectorAll('ul.ranked-list li');
+  for (let i=0;i < list.length;i++) {
+    list[i].innerHTML= list[i].innerHTML+n;
   }
-  list= array
 }
 
 function deepestChild () {
@@ -21,7 +18,7 @@ var list= document.getElementById('grand-node').querySelectorAll('div');
 var array=[];
 array.push(list);
 var criteriaFn= function criteria() {
-  innerHTML= "boo!"
+  div.innerHTML= "boo!"
 }
 function find (array,criteriaFn) {
 for (let i = 0, l = array.length; i < l; i++) {
@@ -30,5 +27,4 @@ for (let i = 0, l = array.length; i < l; i++) {
       }
     }
   }
-
 }
