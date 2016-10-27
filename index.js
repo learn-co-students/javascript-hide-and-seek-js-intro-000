@@ -9,22 +9,16 @@ function nestedTarget() {
 function increaseRankBy(n) {
   const list= document.getElementById('app').querySelectorAll('ul.ranked-list li');
   for (let i=0;i < list.length;i++) {
-    list[i].innerHTML= list[i].innerHTML+n;
+    list[i].innerHTML= parseInt(list[i].innerHTML)+n;
   }
 }
 
 function deepestChild () {
-var list= document.getElementById('grand-node').querySelectorAll('div');
-var array=[];
-array.push(list);
-var criteriaFn= function criteria() {
-  div.innerHTML= "boo!"
-}
-function find (array,criteriaFn) {
-for (let i = 0, l = array.length; i < l; i++) {
-  if (criteriaFn(array[i])) {
-    return array[i]
-      }
-    }
+var list= document.getElementById('grand-node');
+var child=list.children;
+while (child) {
+  list=child
+  child=list.children;
   }
+  return list[0];
 }
