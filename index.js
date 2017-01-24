@@ -27,10 +27,9 @@ function increaseRankBy(n) {
 }
 
 function deepestChild() {
-  var moth = document.getElementById('grand-node');
-  var child = moth.children
-  for(var i = 0; i < child.length; i++) {
-    var more = child[i];
+  var moth = document.querySelectorAll('#grand-node div');
+  for(var i = 0; i < moth.length; i++) {
+    var more = moth[i];
   }
   return more;
 }
