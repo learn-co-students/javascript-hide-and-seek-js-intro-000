@@ -22,3 +22,19 @@ function deepestChild() {
   }
   return elt;
 }
+
+function deepestChild() {
+  var root = document.querySelector('div#grand-node');
+  var lst = [root];
+  var next = null;
+  while (lst) {
+    root = lst.pop();
+    next = root.querySelector('div');
+    if (next) {
+      lst.push(next);
+    }
+    else {
+      return root;
+    }
+  }
+}
