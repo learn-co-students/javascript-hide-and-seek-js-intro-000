@@ -38,3 +38,11 @@ function deepestChild() {
     }
   }
 }
+
+function deepestChild() {
+  var root = document.querySelector('div#grand-node');
+  while (typeof root.children[0] !== 'undefined') {
+    root = root.children[0];
+  }
+  return root;
+}
