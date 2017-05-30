@@ -20,7 +20,9 @@ function deepestChild() {
     el.querySelectorAll('div');
     return el.children[2].innerHTML;
     */
+    var div;
     Array.from(document.querySelectorAll("#grand-node div")).forEach(function(itm){
-    return itm.innerHTML; //itm represents the individual element.
+    div =  itm; //itm represents the individual element.
 });
+    return div;
 }
