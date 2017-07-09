@@ -17,14 +17,11 @@ function deepestChild() {
   var current = 1;
   var next;
 
-  current = document.querySelector('div#grand-node');
-  next = document.querySelector('div#grand-node');
-  while(true){
-    next = next.querySelector('*');
-    if(next === null){
-      break;
-    }
-    current = next;
+  current = document.getElementById('grand-node');
+  next = current.children[0];
+  while(next){
+    current = next
+    next = current.children[0];
   }
   return current;
 }
