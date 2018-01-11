@@ -19,7 +19,7 @@ function increaseRankBy(n) {
     // Increases the ranks in all of the `.ranked-list`s by `n`.
 
     document.querySelectorAll(".ranked-list li").forEach((element) => {
-        element.textContent=n + parseInt(element.textContent)
+        element.textContent = n + parseInt(element.textContent)
     })
 
 }
