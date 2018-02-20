@@ -1,12 +1,12 @@
 function getFirstSelector(selector) {
-  return $(selector)[0]
+  return document.querySelector(selector)
 }
 
 function nestedTarget() {
-  return $(#nested .target)[0]
+  return document.querySelector('#nested .target')
 }
 
-function increaseByRank(n) {
+function increaseRankBy(n) {
   var rankedLis = document.querySelectorAll('li');
 
   for (var i = 0; i < rankedLis.length; i++) {
@@ -15,11 +15,13 @@ function increaseByRank(n) {
 }
 
 function deepestChild() {
-  var select = 'div#grand-node';
-  var node;
-  while (node !== null) {
-    select +=  ' div';
-    node = document.querySelector(select);
+  let node = document.getElementById('grand-node');
+  let nextNode = node.children[0];
+
+  while (nextNode) {
+    node = nextNode;
+    nextNode = node.children[0];
   }
-  return node
+
+  return node;
 }
