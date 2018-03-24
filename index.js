@@ -12,7 +12,6 @@ function deepestChild() {
     if (!current.firstElementChild) {
       return current[current.length - 1];
     }
-    current;
   }
 }
 
