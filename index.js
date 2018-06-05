@@ -3,21 +3,18 @@ function getFirstSelector(selector) {
 }
 
 function nestedTarget() {
-  return document.getElementById('nested').querySelector('.target');
+  return document.querySelector('div.target');
 }
 
 function deepestChild() {
-  const current = document.querySelectorAll('#grand-node div');
-  while (current) {
-    if (!current.firstElementChild) {
-      return current[current.length - 1];
-    }
-  }
+  const divs = document.querySelectorAll('div#grand-node div');
+  return divs[divs.length - 1];
 }
 
 function increaseRankBy(n) {
-  const number = document.querySelectorAll('ul.ranked-list li');
-  for (let i = 0; i < number.length; i++) {
-    number[i].innerHTML = parseInt(number[i].innerHTML) + n;
+  const list = document.querySelectorAll('ul.ranked-list li');
+  for (let i = 0; i < list.length; i += 1) {
+    const newNumber = parseInt(list[i].innerHTML, 10) + n;
+    list[i].innerHTML = newNumber;
   }
 }
