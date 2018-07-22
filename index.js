@@ -16,7 +16,12 @@ function increaseRankBy(n) {
 }
 
 function deepestChild() {
-  var node = document.getElementById('grand-node') {
+  var node = document.getElementById('grand-node');
 
+  while (node.childElementCount > 0) {
+    node = node.querySelectorAll('div');
   }
+
+  return node.innerHTML;
+
 }
