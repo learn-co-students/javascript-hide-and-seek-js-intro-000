@@ -22,9 +22,12 @@ function increaseRankBy(n) {
 }
 
 function deepestChild() {
- const nodes = document.querySelectorAll('div#grand-node');
- const last = nodes[nodes.length- 1];
+ const nodes = document.querySelectorAll('div#grand-node'); {
+ for (var i = 0; i < nodes.length; i++); {
+      nodes[i].innerHTML.div = nodes.length -1; {
+      }
+
+return nodes;
 }
-{
-return last;
+}
 }
