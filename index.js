@@ -21,13 +21,11 @@ function increaseRankBy(n) {
   return lis;
 }
 
-function deepestChild() {
- const nodes = document.querySelectorAll('div#grand-node'); {
- for (var i = 0; i < nodes.length; i++); {
-      nodes[i].innerHTML.div = nodes.length -1; {
-      }
 
-return nodes;
-}
-}
+function deepestChild() {
+  let nodes = document.getElementById('grand-node'); 
+    while (nodes.lastElementChild) {
+      nodes = nodes.lastElementChild ;
+    }
+  return nodes; 
 }
