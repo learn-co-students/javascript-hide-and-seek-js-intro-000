@@ -1,0 +1,25 @@
+    var p = parseInt(n, 10);
+    
+    function element_list(el,depth) {
+    console.log(el+' '+depth);
+    for(var i=0; i<el.children.length; i++) {
+        element_list(el.children[i],depth+1);
+    }
+}
+
+element_list(document,0);
+
+var nodes = div.querySelectorAll('[move_id]');
+var first = nodes[0];
+var last = nodes[nodes.length- 1];
+
+
+var list = document.getElementById("myList").lastElementChild.innerHTML;
+    document.getElementById("demo").innerHTML = list;
+}
+
+
+  // var nodes = document.querySelector('div#grand-node');{
+  // for (let i = 0; i < nodes.length -1; i++) {
+  //   nodes[i].innerHTML;
+  // }
