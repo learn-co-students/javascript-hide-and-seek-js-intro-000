@@ -15,4 +15,12 @@ function increaseRankBy(n) {
 
 function deepestChild() {
   // document.getElementById('grand-node').children[0].children[0].children[0].children[0].innerText
+  var node = document.getElementById('grand-node')
+  var nextNode = node.children[0]
+
+  while (nextNode) {
+    node = nextNode
+    nextNode = node.children[0]
+  }
+  return node
 }
