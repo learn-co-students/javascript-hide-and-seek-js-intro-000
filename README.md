@@ -163,7 +163,7 @@ If you are using an standalone text editor such as Sublime or Atom, before we
 get started, follow [these instructions][instructions] to manually fork and
 clone the lesson repository on GitHub. In your forked and cloned copy, you'll
 find the `index.html` file, which you can then manually open up in the browser.
-(For instructions on opening HTML files in the browser from the Learn IDE,\ see
+(For instructions on opening HTML files in the browser from the Learn IDE, see
 [this Help Center article][help].)
 
 In `index.html`, you'll see that we've set up a basic document for you. We'll be
@@ -201,5 +201,7 @@ Have fun, and good luck!
 - [Selectors](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors)
 
 [selectors]: https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors
+[instructions]: http://help.learn.co/workflow-tips/github/how-to-manually-open-a-lab
+[help]: http://help.learn.co/the-learn-ide/common-ide-questions/viewing-html-pages-in-the-learn-ide
 [parseint]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
 [docs]: https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors
