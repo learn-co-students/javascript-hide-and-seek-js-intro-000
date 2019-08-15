@@ -204,4 +204,4 @@ Have fun, and good luck!
 [parseint]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
 [docs]: https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors
 [help]: https://help.learn.co/articles/493050-viewing-html-pages-in-the-learn-ide
-[instructions]: https://help.learn.co/articles/492935-how-to-manually-open-a-lab
+[instructions]: 
