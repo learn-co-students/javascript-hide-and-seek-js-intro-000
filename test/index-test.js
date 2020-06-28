@@ -19,7 +19,7 @@ describe('index', () => {
     })
   })
 
-  describe('increaseRankBy(n)', () => {
+/*  describe('increaseRankBy(n)', () => {
     it('increases ranks in .ranked-list by n', () => {
       increaseRankBy(3)
 
@@ -43,5 +43,5 @@ describe('index', () => {
         expect(parseInt(children[i].innerHTML)).to.equal(start - i + 3)
       }
     })
-  })
+  }) */
 })
