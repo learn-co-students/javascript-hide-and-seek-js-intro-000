@@ -3,49 +3,30 @@ function getFirstSelector(selector){
 }
 
 function nestedTarget(){
-  document.getElementById('nested').getElementsByClassName('target');
-}
-
-function increaseRankBy(n){
-  //.rank-list += n;
-}
-
-function deepestChild(){
-  //return querySelector(div#grand-node).querySelectorAll();
+  return document.getElementById('nested').querySelector('div.target');
 }
 
 
-/*
-  describe('deepestChild()', () => {
-    it('returns the most deeply nested child in #grand-node', () => {
-      console.log(deepestChild().innerHTML)
-      expect(deepestChild()).to.equal(document.querySelector('#grand-node div div div div'))
-    })
-  })
 
-  describe('increaseRankBy(n)', () => {
-    it('increases ranks in .ranked-list by n', () => {
-      increaseRankBy(3)
+/*function increaseRankBy(n){
+  const upRank = document.getElementById('app').querySelectorAll('ul.ranked-list');
 
-      const rankedLists = document.querySelectorAll('.ranked-list')
-      const firstList = rankedLists[0]
-      const secondList = rankedLists[1]
+   for (let i = 0; i < upRank.length; i++){
+    upRank[i].innerHTML = ((parseInt(upRank[i].innerHTML)) + n);
+    }
+  
+ }*/
+ 
+ function increaseRankBy(n) {
+    var lis = document.getElementById('app').querySelectorAll('ul.ranked-list li')
+    for (var i=0;i<lis.length;i++) {
+      lis[i].innerHTML = parseInt(lis[i].innerHTML) + n
+    }
+}
 
-      let children = firstList.children
-      let start = 1
 
-      expect(children.length).to.equal(2);
-      for (let i = 0, l = children.length; i < l; i++) {
-        expect(parseInt(children[i].innerHTML)).to.equal(start + i + 3)
-      }
+ function deepestChild(){
+  var deep = document.getElementById('grand-node').querySelectorAll('div');
+  return deep[deep.length-1];
 
-      children = secondList.children
-      start = 12
-
-      expect(children.length).to.equal(3);
-      for (let i = 0, l = children.length; i < l; i++) {
-        expect(parseInt(children[i].innerHTML)).to.equal(start - i + 3)
-      }
-    })
-  })
-})*/
+ }
