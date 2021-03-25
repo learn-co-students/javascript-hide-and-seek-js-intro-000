@@ -10,7 +10,6 @@ function nestedTarget() {
 
 function increaseRankBy(n) {
   let a = document
-    .getElementByID("app")
     .querySelectorAll("ul.ranked-list li");
     
   for (let i = 0; i < a.length; i++) {
@@ -19,8 +18,11 @@ function increaseRankBy(n) {
 }
 
 function deepestChild() {
-  let a = document
-    .getElementByID("grand-node")
-    .querySelector("div.grand-node div div div div");
+  let a = document.getElementById('grand-node')
+  let nextNode = a.children[0];
+    while (nextNode) {
+      a = nextNode;
+      nextNode = a.children[0];
+    }
   return a;
 }  
